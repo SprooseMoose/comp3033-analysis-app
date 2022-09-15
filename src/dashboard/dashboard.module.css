@@ -1,0 +1,17 @@
+.dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: auto;
+}
+
+.sectionCard {
+    height: 14em;
+    width: 550px;
+    padding: 1.2em;
+    margin: 6em 1em;
+    border: #a9a9a9 solid 0.1em;
+    border-radius: 0.7em;
+    background-color: transparent;
+    font-size: 1.2em;
+}

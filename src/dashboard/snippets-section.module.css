@@ -1,0 +1,7 @@
+.snippetSection {
+    color: white;
+    height: 10em;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}

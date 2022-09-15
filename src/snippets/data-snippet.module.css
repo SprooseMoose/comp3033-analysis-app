@@ -1,0 +1,12 @@
+.snippetCard {
+    width: 15rem;
+    height: 100%;
+    border: darkgrey 1px solid;
+    border-radius: 10px;
+    margin-right: 1.2em;
+    padding: 0.2em;
+}
+
+.snippetCard h3 {
+    text-align: -moz-center;
+}
