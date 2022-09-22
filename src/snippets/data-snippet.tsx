@@ -10,8 +10,8 @@ const DataSnippet = ({title, data, subtext}: {
     return (
         <Col className={styles.snippetCard}>
             <h3>{title}</h3>
-            <p className={styles.mainStat}>{data}</p>
-            <p>{subtext}</p>
+            <div className={styles.mainStat}>{data}</div>
+            <div>{subtext}</div>
         </Col>
     )
 }
