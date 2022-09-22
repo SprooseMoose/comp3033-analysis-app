@@ -1,12 +1,16 @@
 .snippetCard {
     width: 15rem;
-    height: 100%;
+    height: auto;
     border: darkgrey 1px solid;
     border-radius: 10px;
     margin-right: 1.2em;
-    padding: 0.2em;
+    text-align: -moz-center;
 }
 
-.snippetCard h3 {
-    text-align: -moz-center;
+.mainStat {
+    text-align: center;
+    font-size:60px;
+    margin: 0;
+    color: #ffc65d;
+    font-weight: bold;
 }

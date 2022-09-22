@@ -1,11 +1,10 @@
 import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer} from 'recharts';
+import {SentimentItem} from "../dashboard/utils";
 
+const ANIMATION_DURATION = 680;
 
 const StackedBarChart = ({data, colors}: {
-    data: {
-        name: string,
-        value: number,
-    }[];
+    data: SentimentItem[];
     colors: string[];
 }): JSX.Element => {
     return (
@@ -21,13 +20,15 @@ const StackedBarChart = ({data, colors}: {
                     bottom: 5,
                 }}
             >
-                <CartesianGrid strokeDasharray={"3 3"}/>
-                <XAxis dataKey="name" fontSize={'0.8em'} tick={{fill: 'whitesmoke'}}/>
+                <CartesianGrid vertical={false} strokeDasharray={0}/>
+                <XAxis dataKey="name" fontSize={'0.7em'} tick={{fill: 'whitesmoke'}}/>
                 <YAxis fontSize={'0.8em'} tick={{fill: 'whitesmoke'}}/>
-                <Tooltip contentStyle={{backgroundColor: '#343434', fontSize: '0.8em'}} labelStyle={{color: 'whitesmoke'}} wrapperStyle={{outline: 'none'}} isAnimationActive={false}/>
+                <Tooltip contentStyle={{backgroundColor: '#343434', fontSize: '0.8em'}} cursor={{fill: '#4d6179'}}
+                         labelStyle={{color: 'whitesmoke'}} wrapperStyle={{outline: 'none'}} isAnimationActive={false}/>
                 <Legend fontSize={'0.8em'}/>
-                <Bar dataKey="up" stackId="a" fill={colors[0]} isAnimationActive={false}/>
-                <Bar dataKey="down" stackId="a" fill={colors[1]} isAnimationActive={false}/>
+                <Bar dataKey="positive" stackId="a" fill={colors[0]} animationDuration={ANIMATION_DURATION}/>
+                <Bar dataKey="neutral" stackId="a" fill={colors[1]} animationDuration={ANIMATION_DURATION}/>
+                <Bar dataKey="negative" stackId="a" fill={colors[2]} animationDuration={ANIMATION_DURATION} radius={[8, 8, 0, 0]}/>
             </BarChart>
         </ResponsiveContainer>
     );

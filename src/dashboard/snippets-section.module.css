@@ -1,7 +1,11 @@
 .snippetSection {
-    color: white;
-    height: 10em;
+    color: #fff;
+    height: 11.3em;
     width: auto;
     display: flex;
     flex-direction: row;
+}
+
+.searchTermUsage {
+    font-size: 47px;
 }

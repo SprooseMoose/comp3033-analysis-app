@@ -3,15 +3,22 @@
     flex-direction: column;
     padding: 1em;
     width: auto;
+    margin: 0.5em;
 }
 
 .sectionCard {
     height: 14em;
     width: 550px;
     padding: 1.2em;
-    margin: 6em 1em;
+    margin: 2em 0;
     border: #a9a9a9 solid 0.1em;
     border-radius: 0.7em;
     background-color: transparent;
     font-size: 1.2em;
+}
+
+.keywordSentimentChart {
+    composes: sectionCard;
+    width: 1200px;
+    height: 22em;
 }
